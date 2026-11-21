@@ -9,6 +9,7 @@ import first.robot.mechanisms.Drive;
 import first.robot.mechanisms.Feeder;
 import first.robot.mechanisms.IntakeLauncher;
 import first.robot.simulation.FuelSim;
+import org.wpilib.command3.Scheduler;
 import org.wpilib.framework.OpModeRobot;
 
 /**
@@ -28,6 +29,11 @@ public class Robot extends OpModeRobot {
    * initialization code.
    */
   public Robot() {}
+
+  @Override
+  public void robotPeriodic() {
+    Scheduler.getDefault().run();
+  }
 
   @Override
   public void simulationPeriodic() {

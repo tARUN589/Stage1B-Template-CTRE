@@ -7,7 +7,6 @@ package first.robot.opmode;
 
 import first.robot.Robot;
 import first.robot.RobotConstants;
-import org.wpilib.command3.Scheduler;
 import org.wpilib.command3.button.CommandXboxController;
 import org.wpilib.opmode.PeriodicOpMode;
 import org.wpilib.opmode.Teleop;
@@ -42,8 +41,5 @@ public class MyTeleop extends PeriodicOpMode {
   }
 
   @Override
-  public void periodic() {
-    /* Called periodically (set time interval) while the robot is enabled. */
-    Scheduler.getDefault().run();
-  }
+  public void periodic() {}
 }
